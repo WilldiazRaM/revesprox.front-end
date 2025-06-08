@@ -1,8 +1,9 @@
+
 export default function CotizarPage() {
   return (
-    <main>
-      <h1>Página de Cotización</h1>
-      {/* Aquí puedes importar y usar tu componente CotizacionForm */}
+    <main className="p-4">
+      <h1 className="text-2xl font-bold mb-4">Cotiza con nosotros</h1>
+      
     </main>
-  )
+  );
 }
