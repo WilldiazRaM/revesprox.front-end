@@ -1,8 +1,17 @@
-import type { NextConfig } from "next";
+// next.config.ts
+import { copyFileSync } from "fs";
 
-/** @type {import('next').NextConfig} */
+// Copia el archivo _headers desde public/ al build final en .next/
+try {
+  copyFileSync("public/_headers", ".next/_headers");
+  console.log("✅ Copiado _headers a .next/");
+} catch (e) {
+  console.warn("⚠️ No se pudo copiar _headers:", e);
+}
+
+// Configuración de Next.js
 const nextConfig = {
-  reactStrictMode: true
+  reactStrictMode: true,
 };
 
 export default nextConfig;
